@@ -11,11 +11,16 @@ class OnboardingController extends GetxController {
   /// Update Current Index when Page Scroll
   void updatePageIndicator(index) {
     currentPageIndex.value = index;
-    pageController.jumpTo(index);
   }
 
   /// Jump to the specific dot selected page.
   void dotNavigationClick(index) {
+    currentPageIndex.value = index;
+    pageController.jumpTo(index);
+  }
+
+  /// Update Current Index & jump to next page
+  void nextPage() {
     if (currentPageIndex.value == 2) {
       //Get.to(LoginPage());
     } else {
@@ -24,12 +29,9 @@ class OnboardingController extends GetxController {
     }
   }
 
-  /// Update Current Index & jump to next page
-  void nextPage() {
-    currentPageIndex.value = 2;
-    pageController.jumpTo(2);
-  }
-
   /// Update Current Index & jump to the last Page
-  void skipPage() {}
+  void skipPage() {
+    int page = currentPageIndex.value = 2;
+    pageController.jumpToPage(page);
+  }
 }
