@@ -11,15 +11,15 @@ class OnBoardingNextButton extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
+    final dark = AppHelperFunctions.isDarkMode(context);
     return Positioned(
-        right: TSizes.defaultSpace,
-        bottom: TDeviceUtils.getBottomNavigationBarHeight(),
+        right: AppSizes.defaultSpace,
+        bottom: AppDeviceUtils.getBottomNavigationBarHeight(),
         child: ElevatedButton(
           onPressed: () => OnboardingController.instance.nextPage(),
           style: ElevatedButton.styleFrom(
               shape: const CircleBorder(),
-              backgroundColor: dark ? TColors.primary : Colors.black),
+              backgroundColor: dark ? AppColors.primary : Colors.black),
           child: const Padding(
             padding: EdgeInsets.all(8.0),
             child: Icon(Icons.arrow_forward_ios_outlined),

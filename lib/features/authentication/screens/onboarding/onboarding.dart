@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:t_store/features/authentication/controllers.onboarding/onboarding_controller.dart';
-import 'package:t_store/features/authentication/widgets/onboarding_navigation_indicator.dart';
-import 'package:t_store/features/authentication/widgets/onboarding_nextbutton.dart';
-import 'package:t_store/features/authentication/widgets/onboarding_pages.dart';
-import 'package:t_store/features/authentication/widgets/onboarding_skipbutton.dart';
+import 'package:t_store/features/authentication/screens/onboarding/widgets/onboarding_navigation_indicator.dart';
+import 'package:t_store/features/authentication/screens/onboarding/widgets/onboarding_nextbutton.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
+
 import 'package:t_store/utils/constants/text_strings.dart';
+
+import 'widgets/onboarding_pages.dart';
+import 'widgets/onboarding_skipbutton.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -22,19 +24,19 @@ class OnboardingScreen extends StatelessWidget {
             onPageChanged: controller.updatePageIndicator,
             children: const [
               OnBoardingPage(
-                image: TImages.onBoardingImage1,
-                title: TTexts.onBoardingTitle1,
-                subTitle: TTexts.onBoardingSubTitle1,
+                image: AppImages.onBoardingImage1,
+                title: AppTexts.onBoardingTitle1,
+                subTitle: AppTexts.onBoardingSubTitle1,
               ),
               OnBoardingPage(
-                image: TImages.onBoardingImage2,
-                title: TTexts.onBoardingTitle2,
-                subTitle: TTexts.onBoardingSubTitle2,
+                image: AppImages.onBoardingImage2,
+                title: AppTexts.onBoardingTitle2,
+                subTitle: AppTexts.onBoardingSubTitle2,
               ),
               OnBoardingPage(
-                image: TImages.onBoardingImage3,
-                title: TTexts.onBoardingTitle3,
-                subTitle: TTexts.onBoardingSubTitle3,
+                image: AppImages.onBoardingImage3,
+                title: AppTexts.onBoardingTitle3,
+                subTitle: AppTexts.onBoardingSubTitle3,
               )
             ],
           ),

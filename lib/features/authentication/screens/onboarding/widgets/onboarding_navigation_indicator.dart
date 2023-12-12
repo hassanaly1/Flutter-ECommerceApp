@@ -14,16 +14,17 @@ class OnBoardingNavigationIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = OnboardingController.instance;
-    final dark = THelperFunctions.isDarkMode(context);
+    final dark = AppHelperFunctions.isDarkMode(context);
     return Positioned(
-      bottom: TDeviceUtils.getBottomNavigationBarHeight() + 25,
-      left: TSizes.defaultSpace,
+      bottom: AppDeviceUtils.getBottomNavigationBarHeight() + 25,
+      left: AppSizes.defaultSpace,
       child: SmoothPageIndicator(
         controller: controller.pageController,
         onDotClicked: controller.dotNavigationClick,
         count: 3,
         effect: ExpandingDotsEffect(
-            activeDotColor: dark ? TColors.light : TColors.dark, dotHeight: 6),
+            activeDotColor: dark ? AppColors.light : AppColors.dark,
+            dotHeight: 6),
       ), // SmoothPageIndicator
     );
   }

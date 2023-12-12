@@ -10,10 +10,10 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        title: TTexts.appName,
+        title: AppTexts.appName,
         themeMode: ThemeMode.system,
-        theme: TAppTheme.lightTheme,
-        darkTheme: TAppTheme.darkTheme,
+        theme: MyAppTheme.lightTheme,
+        darkTheme: MyAppTheme.darkTheme,
         debugShowCheckedModeBanner: false,
         // initialBinding: GeneralBindings(),
         home: OnboardingScreen());
