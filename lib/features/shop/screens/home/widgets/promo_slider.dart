@@ -10,7 +10,8 @@ import 'package:t_store/utils/constants/sizes.dart';
 class PromoSlider extends StatelessWidget {
   final List<String> images;
   PromoSlider({
-    super.key, required this.images,
+    super.key,
+    required this.images,
   });
 
   @override
@@ -19,22 +20,23 @@ class PromoSlider extends StatelessWidget {
     return Column(
       children: [
         CarouselSlider(
-          options: CarouselOptions(
-            viewportFraction: 1,
-            onPageChanged: (index, _) {
-              controller.updatePageIndicator(index);
-            },
-          ),
-          items:
-            images.map((url) => RoundedImageWidget(imageUrl: url)).toList();
+            options: CarouselOptions(
+              viewportFraction: 1,
+              onPageChanged: (index, _) {
+                controller.updatePageIndicator(index);
+              },
+            ),
+            items:
+                images.map((url) => RoundedImageWidget(imageUrl: url)).toList()
             // const RoundedImageWidget(imageUrl: AppImages.banner1),
             // const RoundedImageWidget(imageUrl: AppImages.banner2),
             // const RoundedImageWidget(imageUrl: AppImages.banner3),
 
-        ),
+            ),
         const SizedBox(height: AppSizes.spaceBtwItems),
         Obx(
           () => Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               for (int i = 0; i < images.length; i++)
                 CircularContainer(

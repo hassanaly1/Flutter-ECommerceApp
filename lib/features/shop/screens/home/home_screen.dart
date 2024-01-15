@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:t_store/common/widgets/custom_search_container.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:t_store/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
+import 'package:t_store/common/widgets/product/product_card_vertical.dart';
 import 'package:t_store/common/widgets/text/section_heading.dart';
 import 'package:t_store/features/shop/controllers/home_controller.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_appbar.dart';
@@ -86,15 +87,29 @@ class _HomeScreenState extends State<HomeScreen> {
             //BottomPart
             //CarouselSlider
             Padding(
-              padding: const EdgeInsets.all(AppSizes.defaultSpace),
-              child: PromoSlider(images: const [
-                AppImages.banner1,
-                AppImages.banner2,
-                AppImages.banner3
-              ]),
-            )
-
+                padding: const EdgeInsets.all(AppSizes.defaultSpace),
+                child: PromoSlider(images: const [
+                  AppImages.banner1,
+                  AppImages.banner2,
+                  AppImages.banner3
+                ])),
+            const SizedBox(height: AppSizes.spaceBtwSections),
             //GridViewItems
+            GridView.builder(
+              itemCount: 4,
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              padding: EdgeInsets.zero,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: AppSizes.gridViewSpacing,
+                crossAxisSpacing: AppSizes.gridViewSpacing,
+                mainAxisExtent: 288,
+              ),
+              itemBuilder: (context, index) {
+                return ProductCardVertical();
+              },
+            ),
           ],
         ),
       ),

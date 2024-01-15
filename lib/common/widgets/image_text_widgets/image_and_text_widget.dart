@@ -27,8 +27,8 @@ class CustomTextAndImageWidget extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              width: 56,
-              height: 56,
+              width: 54,
+              height: 54,
               padding: const EdgeInsets.all(8.0),
               decoration: BoxDecoration(
                 color: backgroundColor ??
