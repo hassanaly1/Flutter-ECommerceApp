@@ -87,28 +87,37 @@ class _HomeScreenState extends State<HomeScreen> {
             //BottomPart
             //CarouselSlider
             Padding(
-                padding: const EdgeInsets.all(AppSizes.defaultSpace),
-                child: PromoSlider(images: const [
-                  AppImages.banner1,
-                  AppImages.banner2,
-                  AppImages.banner3
-                ])),
-            const SizedBox(height: AppSizes.spaceBtwSections),
-            //GridViewItems
-            GridView.builder(
-              itemCount: 4,
-              shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              padding: EdgeInsets.zero,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                mainAxisSpacing: AppSizes.gridViewSpacing,
-                crossAxisSpacing: AppSizes.gridViewSpacing,
-                mainAxisExtent: 288,
+              padding: const EdgeInsets.all(AppSizes.defaultSpace),
+              child: Column(
+                children: [
+                  PromoSlider(images: const [
+                    AppImages.banner1,
+                    AppImages.banner2,
+                    AppImages.banner3
+                  ]),
+                  const SizedBox(height: AppSizes.spaceBtwSections),
+                  const SectionHeading(
+                      title: 'Popular Products', showActionButton: true),
+                  const SizedBox(height: AppSizes.spaceBtwSections),
+                  //GridViewItems
+                  GridView.builder(
+                    itemCount: 4,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    padding: EdgeInsets.zero,
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: AppSizes.gridViewSpacing,
+                      crossAxisSpacing: AppSizes.gridViewSpacing,
+                      mainAxisExtent: 288,
+                    ),
+                    itemBuilder: (context, index) {
+                      return ProductCardVertical();
+                    },
+                  ),
+                ],
               ),
-              itemBuilder: (context, index) {
-                return ProductCardVertical();
-              },
             ),
           ],
         ),

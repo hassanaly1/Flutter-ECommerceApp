@@ -4,7 +4,12 @@ import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/circular_icon.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/rounded_image.dart';
+import 'package:t_store/common/widgets/text/brand_title_text.dart';
+import 'package:t_store/common/widgets/text/brandtitle_with_verification.dart';
+import 'package:t_store/common/widgets/text/product_price_text.dart';
+import 'package:t_store/common/widgets/text/product_tile_text.dart';
 import 'package:t_store/utils/constants/colors.dart';
+import 'package:t_store/utils/constants/enums.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
@@ -82,114 +87,43 @@ class ProductCardVertical extends StatelessWidget {
                         const ProductTileText(
                             text: 'Green Nike Air Shoes', smallSize: true),
                         const SizedBox(height: AppSizes.spaceBtwItems / 2),
-                        Row(
-                          children: [
-                            Text(
-                              'Nike',
-                              overflow: TextOverflow.ellipsis,
-                              maxLines: 1,
-                              style: Theme.of(context).textTheme.labelMedium,
-                            ),
-                            const SizedBox(width: AppSizes.xs),
-                            const Icon(
-                              Iconsax.verify5,
-                              color: AppColors.primary,
-                              size: AppSizes.iconXs,
-                            )
-                          ],
-                        ),
-                        // const Spacer(),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const ProductPriceText(price: '29.99'),
-                            GestureDetector(
-                              onTap: () {},
-                              child: Container(
-                                decoration: const BoxDecoration(
-                                  color: AppColors.dark,
-                                  borderRadius: BorderRadius.only(
-                                    topLeft:
-                                        Radius.circular(AppSizes.cardRadiusMd),
-                                    bottomRight: Radius.circular(
-                                        AppSizes.productImageRadius),
-                                  ), // BorderRadius.only
-                                ), // BoxDecoration
-                                child: const SizedBox(
-                                  width: AppSizes.iconLg * 1.2,
-                                  height: AppSizes.iconLg * 1.2,
-                                  child: Center(
-                                      child: Icon(Iconsax.add,
-                                          color: Colors.white)),
-                                ),
-                              ),
-                            ), // Container
-                          ],
-                        )
+                        BrandTitleWithVerification(title: 'Nike'),
                       ],
                     ),
                   ),
                 ),
+                const Spacer(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(left: 8.0),
+                      child: ProductPriceText(price: '29.99'),
+                    ),
+                    GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          color: AppColors.dark,
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(AppSizes.cardRadiusMd),
+                            bottomRight:
+                                Radius.circular(AppSizes.productImageRadius),
+                          ), // BorderRadius.only
+                        ), // BoxDecoration
+                        child: const SizedBox(
+                          width: AppSizes.iconLg * 1.2,
+                          height: AppSizes.iconLg * 1.2,
+                          child: Center(
+                              child: Icon(Iconsax.add, color: Colors.white)),
+                        ),
+                      ),
+                    ), // Container
+                  ],
+                )
               ],
             )),
       ),
-    );
-  }
-}
-
-class ProductPriceText extends StatelessWidget {
-  final String currencySign, price;
-  final int maxLines;
-  final bool isLarge;
-  final bool lineThrough;
-  const ProductPriceText({
-    super.key,
-    this.currencySign = '\$',
-    required this.price,
-    this.maxLines = 1,
-    this.isLarge = false,
-    this.lineThrough = false,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      currencySign + price,
-      style: isLarge
-          ? Theme.of(context).textTheme.headlineMedium!.apply(
-              decoration: lineThrough ? TextDecoration.lineThrough : null)
-          : Theme.of(context).textTheme.titleLarge!.apply(
-              decoration: lineThrough ? TextDecoration.lineThrough : null),
-      overflow: TextOverflow.ellipsis,
-      maxLines: maxLines,
-      textAlign: TextAlign.left,
-    );
-  }
-}
-
-class ProductTileText extends StatelessWidget {
-  final String text;
-  final bool smallSize;
-  final int maxLines;
-  final TextAlign? textAlign;
-  const ProductTileText({
-    super.key,
-    required this.text,
-    this.smallSize = false,
-    this.maxLines = 2,
-    this.textAlign = TextAlign.left,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: smallSize
-          ? Theme.of(context).textTheme.labelLarge
-          : Theme.of(context).textTheme.titleSmall,
-      overflow: TextOverflow.ellipsis,
-      maxLines: maxLines,
-      textAlign: textAlign,
     );
   }
 }

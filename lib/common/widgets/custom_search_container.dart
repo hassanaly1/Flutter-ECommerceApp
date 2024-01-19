@@ -9,19 +9,21 @@ class SearchContainer extends StatelessWidget {
   final String text;
   final IconData? icon;
   final bool showBackgroundColor, showBorder;
+  final EdgeInsetsGeometry padding;
   const SearchContainer({
     super.key,
     required this.text,
     this.icon = Iconsax.search_normal,
     this.showBackgroundColor = true,
     this.showBorder = true,
+    this.padding = const EdgeInsets.symmetric(horizontal: AppSizes.md),
   });
 
   @override
   Widget build(BuildContext context) {
     final dark = AppHelperFunctions.isDarkMode(context);
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppSizes.md),
+      padding: padding,
       child: Container(
         padding: const EdgeInsets.all(16.0),
         width: AppDeviceUtils.getScreenWidth(context),

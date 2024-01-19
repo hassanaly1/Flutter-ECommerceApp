@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/common/widgets/appbar/custom_appbar.dart';
-import 'package:t_store/common/widgets/appbar/custom_counter_widget.dart';
+import 'package:t_store/common/widgets/custom_shapes/containers/custom_counter_widget.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 
@@ -30,7 +30,6 @@ class HomeAppBar extends StatelessWidget {
       actions: [
         CustomCounterWidget(
           onPressed: () {},
-          iconColor: AppColors.white,
         )
       ],
     );
