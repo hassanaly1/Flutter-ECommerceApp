@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: AppColors.primary,
                 padding: const EdgeInsets.only(bottom: 0),
                 child: SizedBox(
-                  height: 400,
+                  height: context.height * 0.45,
                   child: Stack(
                     children: [
                       //Background Shapes
