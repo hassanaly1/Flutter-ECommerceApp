@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ProductTileText extends StatelessWidget {
+class ProductTitleText extends StatelessWidget {
   final String text;
   final bool smallSize;
   final int maxLines;
   final TextAlign? textAlign;
-  const ProductTileText({
+  const ProductTitleText({
     super.key,
     required this.text,
     this.smallSize = false,
