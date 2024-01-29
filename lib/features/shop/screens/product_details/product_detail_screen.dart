@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 import 'package:t_store/common/widgets/appbar/custom_appbar.dart';
@@ -15,6 +16,7 @@ import 'package:t_store/features/shop/screens/product_details/widgets/product_at
 import 'package:t_store/features/shop/screens/product_details/widgets/product_detail_top_image.dart';
 import 'package:t_store/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:t_store/features/shop/screens/product_details/widgets/rating_and_share.dart';
+import 'package:t_store/features/shop/screens/product_reviews/product_review.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
@@ -81,7 +83,10 @@ class ProductDetailScreen extends StatelessWidget {
                       const SectionHeading(
                           showActionButton: false, title: 'Reviews (199)'),
                       IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(() => const ProductReviewScreen(),
+                                transition: Transition.rightToLeft);
+                          },
                           icon: const Icon(Iconsax.arrow_right))
                     ],
                   )
