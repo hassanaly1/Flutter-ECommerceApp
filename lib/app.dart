@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:t_store/bottom_navigation_bar.dart';
 import 'package:t_store/features/personalization/screens/address/address.dart';
 import 'package:t_store/features/shop/screens/product_details/product_detail_screen.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
@@ -18,7 +19,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       // initialBinding: GeneralBindings(),
-      home: const UserAddressScreen(),
+      home: const BottomBar(),
     );
   }
 }
