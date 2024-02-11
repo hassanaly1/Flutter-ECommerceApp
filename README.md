@@ -14,7 +14,7 @@ We're dedicated to continuous improvement, and we welcome feedback to make this 
 
 Regards,
 
-Coding with ECommerceApp
+ECommerceApp
 
 ---
 
