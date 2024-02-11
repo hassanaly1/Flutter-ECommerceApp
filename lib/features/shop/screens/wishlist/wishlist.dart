@@ -40,7 +40,7 @@ class WishListScreen extends StatelessWidget {
                   mainAxisExtent: 288,
                 ),
                 itemBuilder: (context, index) {
-                  return ProductCardVertical();
+                  return const ProductCardVertical();
                 },
               ),
             ],

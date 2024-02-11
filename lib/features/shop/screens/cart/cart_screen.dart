@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/appbar/custom_appbar.dart';
-import 'package:t_store/common/widgets/custom_shapes/containers/circular_icon.dart';
 import 'package:t_store/common/widgets/text/product_price_text.dart';
 import 'package:t_store/features/shop/screens/cart/widgets/cart_item.dart';
 import 'package:t_store/features/shop/screens/cart/widgets/product_quantity_with_addremove_icons.dart';
-import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
 class CartScreen extends StatelessWidget {
-  CartScreen({super.key});
+  const CartScreen({super.key});
   @override
   Widget build(BuildContext context) {
     final dark = AppHelperFunctions.isDarkMode(context);

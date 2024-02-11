@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/common/widgets/appbar/custom_appbar.dart';
 import 'package:t_store/common/widgets/appbar/tabbar.dart';
-import 'package:t_store/common/widgets/brand/brand_showcase.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/custom_counter_widget.dart';
 import 'package:t_store/common/widgets/custom_search_container.dart';
-import 'package:t_store/common/widgets/custom_shapes/containers/circular_image.dart';
-import 'package:t_store/common/widgets/custom_shapes/containers/rounded_container.dart';
-import 'package:t_store/common/widgets/text/brandtitle_with_verification.dart';
 import 'package:t_store/common/widgets/text/section_heading.dart';
 import 'package:t_store/features/shop/screens/store/custom_feature_brand.dart';
 import 'package:t_store/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/enums.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 

@@ -4,25 +4,24 @@ import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/circular_icon.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/rounded_image.dart';
-import 'package:t_store/common/widgets/text/brand_title_text.dart';
 import 'package:t_store/common/widgets/text/brandtitle_with_verification.dart';
 import 'package:t_store/common/widgets/text/product_price_text.dart';
 import 'package:t_store/common/widgets/text/product_tile_text.dart';
+import 'package:t_store/features/shop/screens/product_details/product_detail_screen.dart';
 import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/enums.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
 class ProductCardVertical extends StatelessWidget {
-  ProductCardVertical({super.key});
+  const ProductCardVertical({super.key});
 
   @override
   Widget build(BuildContext context) {
     final dark = AppHelperFunctions.isDarkMode(context);
     return GestureDetector(
-      // onTap: () => Get.to(ProductDetailScreen(product: productModel),
-      //     transition: Transition.rightToLeft),
+      onTap: () => Get.to(const ProductDetailScreen(),
+          transition: Transition.rightToLeft),
       child: Padding(
         padding: const EdgeInsets.all(4.0),
         child: Container(
@@ -77,16 +76,16 @@ class ProductCardVertical extends StatelessWidget {
                 ),
                 const SizedBox(height: AppSizes.spaceBtwItems / 2),
                 //Details
-                Padding(
-                  padding: const EdgeInsets.only(left: 8.0),
+                const Padding(
+                  padding: EdgeInsets.only(left: 8.0),
                   child: SizedBox(
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const ProductTitleText(
+                        ProductTitleText(
                             text: 'Green Nike Air Shoes', smallSize: true),
-                        const SizedBox(height: AppSizes.spaceBtwItems / 2),
+                        SizedBox(height: AppSizes.spaceBtwItems / 2),
                         BrandTitleWithVerification(title: 'Nike'),
                       ],
                     ),
@@ -100,6 +99,7 @@ class ProductCardVertical extends StatelessWidget {
                       padding: EdgeInsets.only(left: 8.0),
                       child: ProductPriceText(price: '29.99'),
                     ),
+                    //AddtoCart
                     GestureDetector(
                       onTap: () {},
                       child: Container(

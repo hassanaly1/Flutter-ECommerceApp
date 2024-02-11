@@ -32,7 +32,7 @@ class HomeAppBar extends StatelessWidget {
       actions: [
         CustomCounterWidget(
           onPressed: () =>
-              Get.to(CartScreen(), transition: Transition.upToDown),
+              Get.to(const CartScreen(), transition: Transition.upToDown),
         )
       ],
     );

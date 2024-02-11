@@ -2,15 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
-import 'package:t_store/common/widgets/appbar/custom_appbar.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/circular_icon.dart';
-import 'package:t_store/common/widgets/custom_shapes/containers/circular_image.dart';
-import 'package:t_store/common/widgets/custom_shapes/containers/rounded_container.dart';
-import 'package:t_store/common/widgets/custom_shapes/containers/rounded_image.dart';
-import 'package:t_store/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
-import 'package:t_store/common/widgets/text/brandtitle_with_verification.dart';
-import 'package:t_store/common/widgets/text/product_price_text.dart';
-import 'package:t_store/common/widgets/text/product_tile_text.dart';
 import 'package:t_store/common/widgets/text/section_heading.dart';
 import 'package:t_store/features/shop/screens/product_details/widgets/product_attributes.dart';
 import 'package:t_store/features/shop/screens/product_details/widgets/product_detail_top_image.dart';
@@ -51,7 +43,7 @@ class ProductDetailScreen extends StatelessWidget {
                   const SizedBox(height: AppSizes.spaceBtwItems),
                   //Attributes
                   const SizedBox(height: AppSizes.spaceBtwItems),
-                  ProductAttributes(),
+                  const ProductAttributes(),
                   const SizedBox(height: AppSizes.spaceBtwSections),
                   //Checkout
                   SizedBox(
@@ -149,11 +141,11 @@ class BottomAddToCart extends StatelessWidget {
             onPressed: () {
               // Utils().toastMessage('Add to Cart successfully.');
             },
-            child: const Text('Add to Cart'),
             style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.all(16.0),
                 backgroundColor: AppColors.black,
                 side: const BorderSide(color: AppColors.black)),
+            child: const Text('Add to Cart'),
           )
         ],
       ),

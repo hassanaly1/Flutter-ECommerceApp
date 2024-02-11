@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/rounded_image.dart';
 import 'package:t_store/common/widgets/text/brandtitle_with_verification.dart';
 import 'package:t_store/common/widgets/text/product_tile_text.dart';

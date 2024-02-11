@@ -14,7 +14,7 @@ class CategoryTab extends StatelessWidget {
     final dark = AppHelperFunctions.isDarkMode(context);
     return ListView(
         shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         children: [
           Padding(
             padding: const EdgeInsets.all(AppSizes.defaultSpace),
@@ -50,7 +50,7 @@ class CategoryTab extends StatelessWidget {
                     mainAxisExtent: 288,
                   ),
                   itemBuilder: (context, index) {
-                    return ProductCardVertical();
+                    return const ProductCardVertical();
                   },
                 ),
               ],

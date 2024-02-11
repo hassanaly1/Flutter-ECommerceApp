@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:t_store/app.dart';
 import 'package:t_store/features/authentication/screens/login/login_screen.dart';
 import 'package:t_store/features/authentication/screens/signup/success_screen.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
@@ -19,10 +18,10 @@ class VerifyEmailScreen extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {
-                Get.offAll(LoginScreen(),
+                Get.offAll(const LoginScreen(),
                     transition: Transition.leftToRightWithFade);
               },
-              icon: Icon(CupertinoIcons.clear))
+              icon: const Icon(CupertinoIcons.clear))
         ],
       ),
       body: Padding(

@@ -2,14 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/appbar/custom_appbar.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/circular_container.dart';
-import 'package:t_store/common/widgets/custom_shapes/containers/circular_image.dart';
 import 'package:t_store/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 import 'package:t_store/common/widgets/text/section_heading.dart';
 import 'package:t_store/features/personalization/screens/widgets/settings_menu_tile.dart';
 import 'package:t_store/features/personalization/screens/widgets/user_profile_tile.dart';
-import 'package:t_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -158,7 +155,7 @@ class SettingsScreen extends StatelessWidget {
                     width: double.infinity,
                     child: OutlinedButton(
                       onPressed: () {},
-                      child: Text('logout'),
+                      child: const Text('logout'),
                     ),
                   ),
                   const SizedBox(height: AppSizes.spaceBtwSections),

@@ -90,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.all(AppSizes.defaultSpace),
               child: Column(
                 children: [
-                  PromoSlider(images: const [
+                  const PromoSlider(images: [
                     AppImages.banner1,
                     AppImages.banner2,
                     AppImages.banner3
@@ -113,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisExtent: 288,
                     ),
                     itemBuilder: (context, index) {
-                      return ProductCardVertical();
+                      return const ProductCardVertical();
                     },
                   ),
                 ],

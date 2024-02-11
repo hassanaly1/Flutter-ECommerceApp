@@ -9,7 +9,7 @@ import 'package:t_store/utils/constants/sizes.dart';
 
 class PromoSlider extends StatelessWidget {
   final List<String> images;
-  PromoSlider({
+  const PromoSlider({
     super.key,
     required this.images,
   });

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/text_strings.dart';
 
 class FormDivider extends StatelessWidget {
   const FormDivider({

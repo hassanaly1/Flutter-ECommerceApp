@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:t_store/common/widgets/image_text_widgets/image_and_text_widget.dart';
+import 'package:t_store/features/shop/screens/sub_category/sub_categories.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 
 class HomeCategories extends StatelessWidget {
@@ -17,7 +19,9 @@ class HomeCategories extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return CustomTextAndImageWidget(
-            onTap: () {},
+            onTap: () {
+              Get.to(() => const SubCategoriesScreen());
+            },
             title: 'Shoes',
             image: AppImages.shoeIcon,
           );

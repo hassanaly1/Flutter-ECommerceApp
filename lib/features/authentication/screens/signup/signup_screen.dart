@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/custom_social_icon.dart';
 import 'package:t_store/common/widgets/form_divider.dart';
 import 'package:t_store/features/authentication/screens/signup/verify_email_screen.dart';
@@ -91,7 +90,7 @@ class SignupScreen extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                       onPressed: () {
-                        Get.offAll(VerifyEmailScreen(),
+                        Get.offAll(const VerifyEmailScreen(),
                             transition: Transition.downToUp);
                       },
                       child: const Text(AppTexts.createAccount))),
