@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/appbar/custom_appbar.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:t_store/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 import 'package:t_store/common/widgets/text/section_heading.dart';
+import 'package:t_store/features/personalization/screens/address/address.dart';
 import 'package:t_store/features/personalization/screens/widgets/settings_menu_tile.dart';
 import 'package:t_store/features/personalization/screens/widgets/user_profile_tile.dart';
+import 'package:t_store/features/shop/screens/cart/cart_screen.dart';
+import 'package:t_store/features/shop/screens/order/order_screen.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
@@ -72,15 +76,21 @@ class SettingsScreen extends StatelessWidget {
                   const SectionHeading(
                       showActionButton: false, title: 'Account Settings'),
                   const SizedBox(height: AppSizes.spaceBtwSections),
-                  const SettingsMenuTile(
+                  SettingsMenuTile(
+                      onTap: () => Get.to(() => const UserAddressScreen(),
+                          transition: Transition.rightToLeft),
                       icon: Iconsax.safe_home,
                       title: 'My Addresses',
                       subTitle: 'Set shopping delivery address'),
-                  const SettingsMenuTile(
+                  SettingsMenuTile(
+                      onTap: () => Get.to(() => const CartScreen(),
+                          transition: Transition.rightToLeft),
                       icon: Iconsax.shopping_cart,
                       title: 'My Cart',
                       subTitle: 'Add, remove products and move to checkout'),
-                  const SettingsMenuTile(
+                  SettingsMenuTile(
+                      onTap: () => Get.to(() => const OrderScreen(),
+                          transition: Transition.rightToLeft),
                       icon: Iconsax.bag_tick,
                       title: 'My Orders',
                       subTitle: 'In-progress and Completed Orders'),
