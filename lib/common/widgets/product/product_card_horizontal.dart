@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_store/common/widgets/custom_shapes/containers/circular_icon.dart';
+import 'package:t_store/common/widgets/custom_shapes/containers/ecommerce_store';
 import 'package:t_store/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/rounded_image.dart';
 import 'package:t_store/common/widgets/text/brandtitle_with_verification.dart';

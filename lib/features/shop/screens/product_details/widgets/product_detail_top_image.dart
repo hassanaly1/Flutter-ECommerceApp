@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/appbar/custom_appbar.dart';
-import 'package:t_store/common/widgets/custom_shapes/containers/circular_icon.dart';
+import 'package:t_store/common/widgets/custom_shapes/containers/ecommerce_store';
 import 'package:t_store/common/widgets/custom_shapes/containers/rounded_image.dart';
 import 'package:t_store/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 import 'package:t_store/utils/constants/colors.dart';

@@ -7,6 +7,7 @@ import 'package:t_store/common/widgets/custom_shapes/curved_edges/curved_edges_w
 import 'package:t_store/common/widgets/product/product_card_vertical.dart';
 import 'package:t_store/common/widgets/text/section_heading.dart';
 import 'package:t_store/features/shop/controllers/home_controller.dart';
+import 'package:t_store/features/shop/screens/all_products/all_products.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:t_store/features/shop/screens/home/widgets/promo_slider.dart';
@@ -96,8 +97,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     AppImages.banner3
                   ]),
                   const SizedBox(height: AppSizes.spaceBtwSections),
-                  const SectionHeading(
-                      title: 'Popular Products', showActionButton: true),
+                  SectionHeading(
+                    title: 'Popular Products',
+                    showActionButton: true,
+                    onPressed: () => Get.to(() => const AllProducts()),
+                  ),
                   const SizedBox(height: AppSizes.spaceBtwSections),
                   //GridViewItems
                   GridView.builder(
