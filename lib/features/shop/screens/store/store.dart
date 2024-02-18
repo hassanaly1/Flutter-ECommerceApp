@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:t_store/common/widgets/appbar/custom_appbar.dart';
 import 'package:t_store/common/widgets/appbar/tabbar.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/custom_counter_widget.dart';
 import 'package:t_store/common/widgets/custom_search_container.dart';
 import 'package:t_store/common/widgets/text/section_heading.dart';
-import 'package:t_store/features/shop/screens/store/custom_feature_brand.dart';
+import 'package:t_store/common/widgets/brand/custom_feature_brand.dart';
+import 'package:t_store/features/shop/screens/brands/brands.dart';
 import 'package:t_store/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
@@ -48,8 +50,11 @@ class StoreScreen extends StatelessWidget {
                         padding: EdgeInsets.zero,
                       ),
                       const SizedBox(height: AppSizes.spaceBtwSections),
-                      const SectionHeading(
-                          title: 'Featured Brands', showActionButton: true),
+                      SectionHeading(
+                        title: 'Featured Brands',
+                        showActionButton: true,
+                        onPressed: () => Get.to(() => const AllBrandScreen()),
+                      ),
                       const SizedBox(height: AppSizes.spaceBtwSections / 1.5),
 
                       /// -- featured brands
@@ -69,7 +74,7 @@ class StoreScreen extends StatelessWidget {
                         itemBuilder: (context, index) {
                           return GestureDetector(
                             onTap: () {},
-                            child: CustomFeaturedBrand(
+                            child: BrandCard(
                               showBorder: false,
                               onTap: () {},
                             ),

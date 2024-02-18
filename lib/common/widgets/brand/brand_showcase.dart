@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/rounded_container.dart';
-import 'package:t_store/features/shop/screens/store/custom_feature_brand.dart';
+import 'package:t_store/common/widgets/brand/custom_feature_brand.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
@@ -24,7 +24,7 @@ class BrandShowCase extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: AppSizes.spaceBtwItems),
       child: Column(
         children: [
-          CustomFeaturedBrand(
+          BrandCard(
             showBorder: false,
             onTap: () {},
           ),

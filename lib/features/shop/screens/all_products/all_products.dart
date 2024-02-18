@@ -36,7 +36,7 @@ class AllProducts extends StatelessWidget {
                     const InputDecoration(prefixIcon: Icon(Iconsax.sort)),
                 onChanged: (value) {},
               ),
-              SizedBox(height: AppSizes.spaceBtwSections),
+              const SizedBox(height: AppSizes.spaceBtwSections),
               GridView.builder(
                 itemCount: 6,
                 shrinkWrap: true,
