@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:t_store/bottom_navigation_bar.dart';
+import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 import 'package:t_store/utils/theme/theme.dart';
 
@@ -17,7 +18,13 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       // initialBinding: GeneralBindings(),
-      home: const BottomBar(),
+      home: const Scaffold(
+        backgroundColor: AppColors.primary,
+        body: Center(
+            child: CircularProgressIndicator(
+          color: AppColors.white,
+        )),
+      ),
     );
   }
 }

@@ -35,6 +35,11 @@ dependencies:
   capped_progress_indicator: ^0.0.2
   iconsax: ^0.0.8
 
+  # Firebase
+  firebase_core: ^2.25.4
+  firebase_auth: ^4.17.4
+  firebase_storage: ^11.6.5
+
 
 
   #--------------- ./ PACKAGES END ------------------#
